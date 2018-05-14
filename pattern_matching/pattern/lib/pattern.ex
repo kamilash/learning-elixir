@@ -1,6 +1,6 @@
 defmodule Pattern do
     def swap_values({a,b}) do
-        return {b,a}
+        {b,a}
     end
     def are_equal({a,a}) do
         true
@@ -9,3 +9,7 @@ defmodule Pattern do
         false
     end
 end
+
+IO.inspect Pattern.swap_values({1,2})
+IO.puts Pattern.are_equal({1,1})
+IO.puts Pattern.are_equal({1,2})
