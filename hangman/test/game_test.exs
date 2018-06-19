@@ -9,7 +9,6 @@ defmodule GameTest do
     assert game.turns_left == 7
     assert game.game_state == :initializing
     assert length(game.letters) > 0
-    Enum.map(game.letters, fn(x) -> x =~ ~r/[a-z]/ end) |>
-    Enum.map(fn(x) -> assert x end)
+    Enum.map(game.letters, fn(x) -> assert x =~ ~r/[a-z]/ end)
   end
 end
